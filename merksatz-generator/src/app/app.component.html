@@ -1,0 +1,9 @@
+<div class="p-5">
+    <h5>
+        Merksatz Generator
+    </h5>
+    <keyword-input (keywordAdded)="addKeyword($event)"></keyword-input>
+    <keyword-badge *ngFor="let keyword of keywords; let i = index" [index]="i" [keyword]="keyword"
+        (deleteKeyword)="deleteKeyword($event)">
+    </keyword-badge>
+</div>
