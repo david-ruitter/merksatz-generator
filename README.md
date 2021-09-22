@@ -1,1 +1,1 @@
-# merksatz-generator
+# Merksatz Generator
