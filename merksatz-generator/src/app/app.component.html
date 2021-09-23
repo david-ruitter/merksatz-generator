@@ -6,4 +6,7 @@
     <keyword-badge *ngFor="let keyword of keywords; let i = index" [index]="i" [keyword]="keyword"
         (deleteKeyword)="deleteKeyword($event)">
     </keyword-badge>
+    <hr>
+    <word-generator *ngFor="let keyword of keywords" [startLetter]="keyword.substr(0,1)">
+    </word-generator>
 </div>

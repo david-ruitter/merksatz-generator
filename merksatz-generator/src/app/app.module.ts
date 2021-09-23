@@ -6,19 +6,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { KeywordInputComponent } from './components/keyword-input/keyword-input.component';
 import { KeywordBadgeComponent } from './components/keyword-badge/keyword-badge.component';
+import { WordGeneratorComponent } from './components/word-generator/word-generator.component';
+import { WordService } from './components/word-generator/word.service';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
     AppComponent,
     KeywordInputComponent,
-    KeywordBadgeComponent
+    KeywordBadgeComponent,
+    WordGeneratorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule,
+    HttpClientModule,
+    NgxSkeletonLoaderModule,
   ],
-  providers: [],
+  providers: [
+    WordService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
