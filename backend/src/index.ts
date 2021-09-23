@@ -1,5 +1,6 @@
 import express from 'express';
 import request from 'request';
+import cors from 'cors';
 
 interface Word {
     word: string;
@@ -7,6 +8,8 @@ interface Word {
 
 const main = async () => {
     const app = express();
+
+    app.use(cors());
 
     // English words endpoint
     app.get('/en/:startLetter', (req, res) => {
